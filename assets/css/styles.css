@@ -1,0 +1,999 @@
+/**IMPORT**/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100;300;600;700&display=swap');
+
+/**NORMALIZE**/
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/**GLOBALS**/
+html{
+    font-family: 'Montserrat', Sans-serif;
+    font-size: 62.5%;
+}
+
+/***VARIABLES***/
+:root{
+    --principal: #FC8C46; --efectoPrincipal: #f77626;
+    --secondary: #2C96A9; --efectoSecondary: #036F82;
+    --blanco: #f3f3f3; --negro: #0f0f0f;
+    --cTituloTour:#696c6d;
+}
+/**HELPERS**/
+.content{
+    padding: 1.5rem;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+/* .body-index{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+.body-pag{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+} */
+.linea{
+    /* background: var(--principal); */
+    background-image: radial-gradient(circle, #fc8c46, #c69e31, #8ea745, #58a86a, #21a38e, #21a38e, #21a38e, #21a38e, #58a86a, #8ea745, #c69e31, #fc8c46);
+    height: 5px;
+    width: 100%;
+    display: block;
+}
+
+/*********INCIO HEADER*********/
+/*---background header---*/
+.header .header__background-img{
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url(../images/des-puno.jpg);
+    background-repeat: no-repeat;
+    background-position: none center;
+    background-size:cover;
+    height: 99.3vh;
+    display: flex;
+    flex-direction: column;
+}
+.header .header__background-otters--img{
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url(../images/des-puno.jpg);
+    background-repeat: no-repeat;
+    background-position: none center;
+    background-size:cover;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+}
+/*---background navbar---*/
+.header .header__contenedor-navbar{
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    border-bottom: 1px solid rgb(158, 158, 158);
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    /* display: flex;
+    flex-direction: row; */
+    z-index: 1000;
+}
+.header .header__contenedor-navbar .navbar{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1080px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 10vh;
+    padding: 0 2rem;/*0 2rem*/
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    /* border-bottom: 1px solid rgb(158, 158, 158); */
+}
+
+.nav_logo{
+    width: 85%;
+    min-width: 120px;
+}
+.link-logo{
+    flex-basis: 20%;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav__enlaces-menu{
+    flex-basis: 50%;
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+}
+.nav__enlaces-menu .nav__enlaces-menu__item{
+    /* padding: 10px 40px; */
+    padding: 1rem 2rem;
+    list-style-type: none;
+    transition: 0.5s;
+}
+.nav__enlaces-menu .nav__enlaces-menu__item .nav__enlaces-menu__item__link{
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: 1.5em;
+    font-weight: 600;
+    letter-spacing: 0.05em; /*Espaciado de letras*/
+    padding: 1rem 0;
+}
+.nav__enlaces-menu .nav__enlaces-menu__item:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+.nav__ham{
+    display: none;
+    cursor: pointer;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+.nav__ham span{
+    display: block;
+    background-color: var(--blanco);
+    height: 3px;
+    width: 28px;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+/********* TITULO DE PAGINA**********/
+.content-tittle{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header__titulo-index{
+    width: 100%;
+    max-width: 1080px;
+    height: auto;
+    color: var(--blanco);
+    /* background-color: rgba(0, 0, 0, 0.65); */
+    /* padding: 5px ; */
+}
+.header__titulo{
+    width: 100%;
+    height: auto;
+    color: var(--blanco);
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    padding: 5px ;
+}
+.titulo-seccion{ /*para el titulo dentro del slider de destinos, tours, nosotros, galeria contacto*/
+    /* margin-top: 10%; */
+    font-family: "Bebas Neue";
+    font-size: 8em;
+    /* text-align: center; */
+    letter-spacing: 5px;
+    animation-duration: 2s;
+}
+.titulo-seccion-otros{ /*para el titulo dentro del slider de destinos, tours, nosotros, galeria contacto*/
+    /* margin-top: 10%; */
+    font-family: "Bebas Neue";
+    font-size: 4em;
+    text-align: center;
+    letter-spacing: 5px;
+}
+.titulo__texto{
+    font-size: 6em;
+    animation-duration: 2.5s;
+    /* text-align: center; */
+}
+
+.header__contenedor-navbar.abajo{
+    /* background-color: var(--blanco); */
+    background-color: var(--negro);
+}
+.header__contenedor-navbar.abajo .nav_logo{
+    width: 65%;
+}
+.header__contenedor-navbar.abajo .navbar{
+    min-height: 8.5vh;
+}
+/*********FIN HEADER*********/
+
+/************INICIO MAIN************/
+.seccion1__sub-titulo{
+    font-family: "Bebas Neue";
+    font-weight: 400;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 3.5em;
+    color: var(--secondary);
+}
+.seccion1__contenedor{
+    display: flex;
+    justify-content: space-between;
+}
+.seccion1__cuerpo__texto{
+    text-align: justify;
+    word-spacing: 2px;
+    white-space:pre-line;
+    display: inline-block;
+    font-size: 1.6em;
+    width: 71%;
+}
+.seccion1__cuerpo__imagen{
+    display: inline-block;
+    width: 20%;
+    align-items: center;
+    /* padding: 0 25px; */
+}
+.seccion1__cuerpo__imagen img{
+    border-radius: 350px;
+    width: 100%;
+}
+.seccion1__cuerpo__texto .celeste{
+    font-weight: bold;
+    color: var(--secondary);
+}
+/*********FRASE VIAJA CON MAYHUA TRAVEL********/
+.frase{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--secondary);
+    padding: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    word-spacing: 3px;
+}
+.icono{
+    display:inline-block;
+    width: 4%;
+}
+.frase__icono{
+    width: 100%;
+}
+.frase__texto{
+    color: var(--blanco);
+    display: inline-block;
+    font-size: 2em;
+    text-align: center;
+}
+
+/***********SECCION DE LOS TOP TOURS********************/
+.toptours{
+    display: flex;
+    flex-direction: column;
+}
+.toptours__titulo{
+    font-family: "Bebas Neue";
+    font-weight: bolder;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 4em;
+    color: var(--principal);
+    word-spacing: 5px;
+}
+.toptours__texto{
+    text-align: center;
+    word-spacing: 2px;
+    font-size: 1.6em;
+}
+.lista-tours{
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+    grid-gap: 25px 45px;
+    /* overflow: hidden; */
+}
+.tour{
+    display: block;
+    background-color: rgb(247, 247, 247);
+    /* width: 100%; */
+    /* max-width: 350px; */
+    /* height: 100%; */
+    /* padding: 0 15px; */
+    /* margin: 0 5px;
+    vertical-align: top; */
+    position: relative;
+    overflow: hidden;
+    box-shadow: 3px 3px 5px 0.5px rgba(0, 0, 0, 0.5);
+}
+.tour__img{
+    width: 100%;
+    vertical-align: top;
+    height: 300px;
+    object-fit: cover;
+}
+.tour div{
+    overflow: hidden;
+}
+.tour div:hover img{
+    /* filter: blur(1px); */
+    transform: scale(1.2);
+}
+.tour__titulo{
+    font-family: "Bebas Neue";
+    color: var(--cTituloTour);
+    text-align: center;
+    font-size: 2.5em;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    font-weight: lighter;
+}
+.tour__titulo:hover{
+    color: var(--secondary);
+}
+.tour__intro{
+    padding: 0 20px 10px;
+    word-spacing: 2px;
+    font-size: 1.6em;
+}
+.tour__boton__texto{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: var(--blanco);
+    font-size: 1.6em;
+    padding-top: 7px;
+}
+.tour__boton{
+    display: block;
+    width: 100%;
+    height: 35px;
+    background-color: var(--principal);
+    text-decoration: none;
+    font-weight: bold;
+}
+.tour__boton:hover{
+    background-color: var(--secondary);
+    border: 1px solid var(--secondary);
+    color: var(--principal);
+}
+.boton-mas{
+    align-self: center;
+    width: 350px;
+    height: 35px;
+    background-color:var(--secondary);
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+.boton-mas:hover{
+    background-color: --efectoSecondary;
+}
+.boton-mas__texto{
+    text-align: center;
+    color: var(--blanco);
+    font-weight: bolder;
+}
+/********************OFERTA DEL MES***********************/
+
+.oferta__imagen{
+    height: 350px;
+    background-image: url(../images/ciudadela-machu-picchu.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: none center;
+    background-size:cover;
+    margin:40px 0;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.contenedor-texto-oferta{
+    /* padding: 1.5rem; */
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-basis: 100%;
+}
+.oferta-texto{
+    background-color: rgba(44, 150, 169, 0.75);
+    height: 400px;
+    width: 450px;
+    padding: 40px;
+    color: var(--blanco);
+    border-radius: 2%;
+}
+.oferta-texto__titulo{
+    font-size: 2.4em;
+    padding-bottom: 20px;
+}
+.oferta-texto__intro{
+    font-size: 1.6em;
+    padding: 0 20px 20px;
+}
+.oferta-texto__boton{
+    display: inline-block;
+    width: 200px;
+    height: 35px;
+    background-color: var(--principal);
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.8em;
+}
+.oferta-texto__boton:hover{
+    background-color: var(--efectoPrincipal);
+}
+.oferta-texto__boton__texto{
+    padding-top: 5px;
+    color: var(--blanco);
+    text-align: center;
+}
+/************************TIPS***************************/
+.tips{
+    display: flex;
+    flex-direction: column;
+}
+.tips__texto{
+    padding-bottom: 40px;
+}
+.contenedor-tips{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.tip{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* border-radius: 50%; */
+    width: 300px;
+    height: 300px;
+    margin: 15px;
+    border-radius: 50%;
+    box-shadow:  11px 11px 22px #9d9d9d,
+             -11px -11px 22px #ffffff;
+}
+.tip__intro{
+    font-size: 1.6em;
+    color: var(--blanco);
+    text-transform: uppercase;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+/*---------------------PAG Destinos-------------------------*/
+.destino__boton{
+    display: block;
+    width: 100%;
+    height: 35px;
+    background-color: rgb(238, 238, 238);
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid rgb(206, 206, 206);
+    border-left: 0px;
+    border-right: 0px;
+}
+.destino__boton:hover{
+    border: 1px solid var(--secondary);
+}
+.destino__boton__texto{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: var(--negro);
+    padding-top: 7px;
+    font-size: 1.6em;
+}
+/*---------------------PAG Nosotros-------------------------*/
+.nosotros{
+    display: grid;
+    grid-template-rows: repeat(2,auto);
+}
+.familia-mt{
+    grid-row: 1 / 2;
+    padding: 0 1.5em 3em 1.5em;
+}
+.mision-vision{
+    grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column;
+}
+.mision{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 0;
+}
+.mision__texto{   
+    display: inline-block; 
+    padding: 40px;
+    /* width: 650px; */
+    background-color: var(--secondary);
+    color: var(--blanco);
+    text-align: justify;
+    flex-basis: 70%;
+}
+.mision__img{
+    display: inline-block;
+    width: 350px;
+    border: 0.2px solid rgb(211, 211, 211);
+    flex-basis: 30%;
+}
+.mision__imagen{
+    width: 100%;
+    /* height: 100%; */
+}
+.vision{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 0;
+}
+.vision__img{
+    display: inline-block;
+    /* width: 500px; */
+    border: 0.2px solid rgb(211, 211, 211);
+    flex-basis: 30%;
+}
+.vision__texto{
+    display: inline-block;
+    padding: 40px;
+    /* width: 650px; */
+    background-color: var(--secondary);
+    color: var(--blanco);
+    text-align: justify;
+    flex-basis: 70%;
+}
+
+/*---------------------PAG Galeria-------------------------*/
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+    width: 95%;
+    margin: auto;
+    grid-gap: 10px;
+    padding: 40px;
+    overflow: hidden;
+}
+.galeria > a{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+.galeria img{
+    width: 100%;
+    vertical-align: top;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+.galeria a:hover img{
+    filter: blur(2px);
+    transform: rotate(10deg)
+    scale(1.3);
+}
+.light-box{
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease-in-out;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+}
+.light-box img{
+    width: 75vw;
+    max-height: 75vh;
+}
+.light-box:target{
+    transform: scale(1);
+}
+.close{
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background: var(--principal);
+    color: var(--blanco);
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 2em;
+    /* font-weight: bold; */
+}
+.next{
+    display: block;
+    background: var(--principal);
+    color: var(--blanco);
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    text-align: center;
+}
+/*---------------------PAG Contacto-------------------------*/
+.seccion-contacto{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto auto;
+    gap: 2.5rem;
+}
+.formulario-contacto{
+    grid-column: 1 / 2;
+    grid-row: 1;
+    padding: 40px;
+    border: 0.2px solid rgb(216, 216, 216);
+    background-color: rgb(253, 253, 253);
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.1);
+}
+.formulario-contacto__titulo{
+    padding: 15px 0;
+    font-size: 2.08em;
+}
+.etiqueta{
+    font-size: 1.44em;
+    display: block;
+}
+.campo-texto{
+    display: block;
+}
+.campo{
+    width: 95%;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: 2px solid rgb(216, 216, 216);
+    border-radius: 5px;
+    font-family: 'Montserrat', Sans-serif;
+    font-size: 1.11em;
+    margin-bottom: 22px;
+    transition: 0.3s;
+}
+.campo:hover{
+    background-color: rgba(189, 189, 189, 0.05);
+}
+.campo:focus{
+    background-color: var(--blanco);
+    border: 2px solid var(--secondary);
+}
+.btn_enviar{
+    width: 100px;
+    padding: 0.5rem 1rem;
+    font-size: 1.76em;
+    background-color: var(--secondary);
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    color: var(--blanco);
+}
+.btn_enviar:hover{
+    background-color: --efectoSecondary;
+}
+.contenido-contacto{
+    grid-column: 2 / 3;
+    grid-row: 1;
+    border: 0.2px solid rgb(216, 216, 216);
+    padding: 40px;
+}
+.contenido-contacto__titulo{
+    padding: 15px 0;
+    font-size: 2.08em;
+}
+.contenido-contacto__texto{
+    word-spacing: 2px;
+    padding-bottom: 10px;
+    font-size: 1.44em;
+}
+.mapa{
+    grid-column: 1 / 3;
+    grid-row: 2;
+    border: 0.2px solid rgb(216, 216, 216);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+/************FIN MAIN************/
+
+/**** INICIO FOOTER****/
+footer{
+    background-color: var(--secondary);
+    color: var(--blanco);
+    font-size: 1.4em;
+}
+.footer__container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto auto;
+    justify-items: center;
+    align-items: start;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+.footer__logo{
+    grid-column: 1 / 5;
+    grid-row: 1;
+}
+.footer__visitanos{
+    grid-column: 1 / 2;
+    grid-row: 2;
+}
+.footer__contacto{
+    grid-column: 2 / 3;
+    grid-row: 2;
+}
+.footer__interes{
+    grid-column: 3 / 4;
+    grid-row: 2;
+}
+.footer__logo__img{
+    padding: 10px;
+    width: 90%;
+}
+.footer__container__items__item__links{
+    list-style-type: none;
+}
+.footer__container__items__item__links li a{
+    text-decoration: none;
+    color: var(--blanco);
+}
+.footer__derechos-reservados{
+    background-color: var(--negro);
+    color: var(--blanco);
+    font-size: 0.9em;
+    text-align: center;
+    height: 15px;
+}
+.icono-social{
+    background-color: var(--secondary);
+    /* color: var(--principal); */
+    color: var(--blanco);
+    font-size: 1.5em;
+}
+/**** FIN FOOTER****/
+
+/*-----------------RESPONSIVE---------------*/
+@media screen and (max-width:1200px){
+    .content{
+        max-width: 900px;
+    }
+    .header .header__contenedor-navbar .navbar{
+        max-width: 900px;
+    }
+    .seccion-contacto{
+        gap: 1rem;
+    }
+    .formulario-contacto{
+        padding: 20px;
+    }
+    .contenido-contacto{
+        padding: 20px;
+    }
+}
+@media screen and (max-width:768px){
+    .header .header__contenedor-navbar .navbar{
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        min-height: 7vh;
+        padding: .5rem 0;
+        font-size: 1em;
+    }
+    .nav_logo{
+        width: 180px;
+        min-width: 120px;
+    }
+    .nav__enlaces-menu{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav__enlaces-menu .nav__enlaces-menu__item{
+        padding: 0.5rem 0.6rem;
+    }
+    .link-logo{
+        flex-basis: 30%
+    }
+    .header .header__background-img{
+        height: 50vh;
+    }
+    .header .header__background-otters--img{
+        height: 30vh;
+    }
+    .seccion1__cuerpo__texto{
+        word-spacing: 2px;
+        width: 90%;
+    }
+    .seccion1__cuerpo__imagen{
+        width: 55%;
+    }
+    .titulo-seccion{ /*para el titulo dentro del slider de destinos, tours, nosotros, galeria contacto*/
+        font-size: 4em;
+        text-align: center;
+        letter-spacing: 5px;
+    }
+    .titulo-seccion-otros{
+        font-size: 2.5em;
+    }
+    .titulo__texto{
+        font-size: 2.5em;
+        text-align: center;
+    }
+    .seccion1__contenedor{
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .icono{
+        display:inline-block;
+        width: 10%;
+        /* height: 3%; */
+    }
+    .contenedor-texto-oferta{
+        flex-basis: auto;
+    }
+    .oferta__imagen{
+        justify-content: center;
+    }
+    .oferta-texto{
+        padding: 15px;
+        height: 400px;
+        width: 350px;
+    }
+    .footer__container{
+        display: grid;
+        /* grid-template-columns: 1fr; */
+        grid-template-rows: auto auto auto auto;
+        /* justify-items: center;
+        align-items: start; */
+        gap: 1em;
+        flex-wrap: wrap;
+        text-align: center;        
+    }
+    .footer__logo{
+        grid-column: 1 / 5;
+        grid-row: 1;
+    }
+    .footer__visitanos{
+        grid-column: 1 / 5;
+        grid-row: 2;
+    }
+    .footer__contacto{
+        grid-column: 1 / 5;
+        grid-row: 3;
+    }
+    .footer__interes{
+        grid-column: 1 / 5;
+        grid-row: 4;
+    }
+    .mision{
+        flex-flow: column wrap;
+        align-items: center;
+        padding: 15px 0;
+    }
+    .mision__texto{   
+        flex-basis: auto;
+        width: 90%;
+        padding: 20px;
+    }
+    .mision__img{
+        flex-basis: auto;
+        width: 90%;
+    }
+    .vision{
+        flex-flow: column wrap-reverse;
+        align-items: center;
+        padding: 15px 0;
+    }
+    .vision__texto{  
+        flex-basis: auto; 
+        width: 90%;
+        padding: 20px;
+    }
+    .vision__img{
+        flex-basis: auto;
+        width: 90%;
+    }
+    .seccion-contacto{
+        grid-template-rows: auto auto auto;
+        gap: 1rem;
+    }
+    .formulario-contacto{
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
+    .contenido-contacto{
+        grid-column: 1 / 3;
+        grid-row: 2;
+    }
+    .mapa{
+        grid-column: 1 / 3;
+        grid-row: 3;
+    }
+}
+@media screen and (max-width:450px){
+    .galeria{
+        grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    }
+    .close{
+        top: 20px;
+        right: 20px;
+    }
+    .lista-tours{
+        grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    }
+    .boton-mas{
+        width: 250px;
+    }
+    .oferta-texto{
+        width: 90%;
+    }
+
+    /* body{
+        overflow: hidden;
+    } */
+    .nav_logo{
+        padding-left: 25px;
+    }
+    .nav__ham{
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        transition: 0.2s 0.1s;
+    }
+    .nav__ham:hover{
+        transform: rotate(360deg);
+    }
+    .header .header__contenedor-navbar .navbar{
+        /* background-color: rgba(0, 0, 0, .7); */
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 0;
+        /* min-height: 100vh; */
+        justify-content: flex-start;
+    }
+    .nav__enlaces-menu{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 92vh;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: none;
+        opacity: 0;
+    }
+    .nav__enlaces-menu .nav__enlaces-menu__item{
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+    }
+    
+}
+@keyframes muestraMenu{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+.nav__enlaces-menu.activado{
+    background-color: var(--negro);
+    display: flex;
+    animation: muestraMenu 400ms ease-in-out both;
+}
+.br-1.animado{
+    transform: rotate(-45deg) translate(-10px, 8px);
+}
+.br-2.animado{
+    opacity: 0;
+}
+.br-3.animado{
+    transform: rotate(45deg) translate(-10px, -8px);
+}
